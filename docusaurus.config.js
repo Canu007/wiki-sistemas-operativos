@@ -88,72 +88,62 @@ themes: ['@docusaurus/theme-mermaid'],
       colorMode: {
         respectPrefersColorScheme: true,
       },
-      navbar: {
-        title: 'My Site',
-        logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+navbar: {
+  title: 'Wiki de Sistemas Operativos I',
+
+  items: [
+    {
+      to: '/',
+      label: 'Inicio',
+      position: 'left',
+    },
+    {
+      to: '/#unidades',
+      label: 'Unidades',
+      position: 'left',
+    },
+    {
+      type: 'doc',
+      docId: 'unidad-1-introduccion/introduccion-sistemas-operativos',
+      label: 'Documentación',
+      position: 'left',
+    },
+  ],
+},
+footer: {
+  style: 'dark',
+
+  links: [
+    {
+      title: 'Wiki Académica',
+      items: [
+        {
+          label: 'Inicio',
+          to: '/',
         },
-        items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Tutorial',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
-      },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-      },
+        {
+          label: 'Unidad 1: Introducción',
+          to: '/docs/unidad-1-introduccion/',
+        },
+        {
+          label: 'Unidad 2: Procesos',
+          to: '/docs/unidad-2-procesos/',
+        },
+      ],
+    },
+    {
+      title: 'Proyecto',
+      items: [
+        {
+          label: 'Contenido académico',
+          to: '/#unidades',
+        },
+      ],
+    },
+  ],
+
+  copyright: `© ${new Date().getFullYear()} Wiki de Sistemas Operativos I. Proyecto académico.`,
+},
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,

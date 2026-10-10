@@ -1,23 +1,233 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
+/* ENCABEZADO PRINCIPAL */
 
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+.hero {
+  background: linear-gradient(
+    135deg,
+    #0b1736 0%,
+    #142c59 55%,
+    #1d467e 100%
+  );
+
+  color: white;
+  padding: 110px 0;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
+.heroContenido {
+  max-width: 800px;
+}
+
+.etiqueta {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #93c5fd;
+  margin-bottom: 25px;
+}
+
+.heroTitulo {
+  font-size: clamp(42px, 6vw, 72px);
+  font-weight: 800;
+  line-height: 1.15;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.heroDescripcion {
+  font-size: 19px;
+  line-height: 1.8;
+  color: #dbeafe;
+  max-width: 650px;
+}
+
+.heroBotones {
+  display: flex;
+  gap: 15px;
+  margin-top: 35px;
+  flex-wrap: wrap;
+}
+
+.botonPrincipal {
+  background: #3b82f6;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.botonPrincipal:hover {
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+}
+
+.botonSecundario {
+  border: 1px solid #93c5fd;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.botonSecundario:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-decoration: none;
+}
+
+/* SECCIÓN DE UNIDADES */
+
+.seccionUnidades {
+  padding: 90px 0;
+  background: var(--ifm-background-color);
+}
+
+.seccionEncabezado {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 50px;
+}
+
+.subtitulo {
+  color: #3b82f6;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.seccionEncabezado h2 {
+  font-size: 36px;
+  margin-top: 15px;
+}
+
+.seccionEncabezado p {
+  font-size: 17px;
+  color: var(--ifm-font-color-secondary);
+}
+
+/* TARJETAS */
+
+.gridUnidades {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.tarjeta {
+  background: var(--ifm-card-background-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 14px;
+  padding: 30px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.tarjetaSuperior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.numeroUnidad {
+  font-size: 12px;
+  font-weight: 800;
+  color: #3b82f6;
+}
+
+.estado {
+  font-size: 11px;
+  background: var(--ifm-color-emphasis-100);
+  padding: 6px 10px;
+  border-radius: 20px;
+}
+
+.tarjeta h3 {
+  font-size: 21px;
+  margin-bottom: 15px;
+}
+
+.tarjeta p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--ifm-font-color-secondary);
+  flex-grow: 1;
+}
+
+.enlaceUnidad {
+  color: var(--ifm-color-primary);
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.noDisponible {
+  color: var(--ifm-color-emphasis-600);
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+/* INFORMACIÓN */
+
+.seccionInformacion {
+  padding: 80px 0;
+  text-align: center;
+  background: var(--ifm-color-emphasis-100);
+}
+
+.seccionInformacion h2 {
+  font-size: 32px;
+}
+
+.seccionInformacion p {
+  max-width: 800px;
+  margin: 20px auto 0;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 996px) {
+  .gridUnidades {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    padding: 80px 0;
   }
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media (max-width: 650px) {
+  .gridUnidades {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 65px 0;
+  }
+
+  .heroTitulo {
+    font-size: 40px;
+  }
+
+  .heroDescripcion {
+    font-size: 16px;
+  }
+
+  .seccionUnidades {
+    padding: 60px 0;
+  }
+
+  .seccionEncabezado h2 {
+    font-size: 28px;
+  }
 }
