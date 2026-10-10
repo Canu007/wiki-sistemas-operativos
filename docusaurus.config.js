@@ -26,15 +26,14 @@ themes: ['@docusaurus/theme-mermaid'],
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
-
+url: 'https://canu007.github.io',
+baseUrl: '/wiki-sistemas-operativos/',
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+organizationName: 'Canu007',
+projectName: 'wiki-sistemas-operativos',
 
   onBrokenLinks: 'throw',
 
